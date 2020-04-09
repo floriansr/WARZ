@@ -1,6 +1,7 @@
 class Barbarian extends Character {
   constructor (name, healthPoint, manaEnergy, attack = 60, defence = 20) {
     super(name, healthPoint, manaEnergy, attack, defence);
+      this.avatar = "img/garruk.jpg";
   }
 
 

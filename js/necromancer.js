@@ -1,6 +1,7 @@
 class Necromancer extends Character {
   constructor (name, healthPoint, manaEnergy, attack = 50, defence = 35) {
     super(name, healthPoint, manaEnergy, attack, defence);
+        this.avatar = "img/liliana.jpg";
   }
 
 

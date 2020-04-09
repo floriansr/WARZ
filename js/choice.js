@@ -13,6 +13,9 @@ const profil3 = document.getElementById('profil3');
 const first = document.getElementById('first');
 const second = document.getElementById('second');
 
+const avatar2 = profil2.attributes["0"].value;
+
+
 
 // incluer les instances objets array avant le choix via eventlistener
 // boucler addEventListener?
@@ -64,8 +67,8 @@ document.getElementById("third_character").addEventListener("click", function(ev
 
 chooseOpponent = () => {
 
-	let avatar1 = profil.attributes["0"].value;
-	let avatar2 = profil2.attributes["0"].value;
+	const avatar1 = profil.attributes["0"].value;
+	const avatar2 = profil2.attributes["0"].value;
 
 	second_page.setAttribute('hidden', '');
 	third_page.removeAttribute('hidden', '');
@@ -73,6 +76,12 @@ chooseOpponent = () => {
 	first.src=avatar1;
 	second.src=avatar2;
 
+	// console.log(avatar2);
+	// 	console.log(i.avatar);
+	// 		console.log(z.avatar);
+	// 			console.log(s.avatar);
+	
+	selectOpponent();
 	start();
 };
 
@@ -80,8 +89,8 @@ chooseOpponent = () => {
 
 chooseOpponent2 = () => {
 
-	let avatar1 = profil.attributes["0"].value;
-	let avatar3 = profil3.attributes["0"].value;
+	const avatar1 = profil.attributes["0"].value;
+	const avatar3 = profil3.attributes["0"].value;
 
 	second_page.setAttribute('hidden', '');
 	third_page.removeAttribute('hidden', '');
@@ -89,5 +98,40 @@ chooseOpponent2 = () => {
 	first.src=avatar1;
 	second.src=avatar3;
 
+	// console.log(avatar3);
+	// 	console.log(i.avatar);
+	// 		console.log(z.avatar);
+	// 			console.log(s.avatar);
+
+	selectOpponent2();
 	start();
+};
+
+
+selectOpponent = () => {
+
+	const avatar2 = profil2.attributes["0"].value;
+
+	if (avatar2 == i.avatar)
+		return allCharacters.push(i)
+	if (avatar2 == z.avatar)
+		return allCharacters.push(z)
+	if (avatar2 == s.avatar)
+		return allCharacters.push(s)
+
+	console.log(allCharacters);
+};
+
+selectOpponent2 = () => {
+
+	const avatar3 = profil3.attributes["0"].value;
+
+	if (avatar3 == i.avatar)
+		return allCharacters.push(i)
+	if (avatar3 == z.avatar)
+		return allCharacters.push(z)
+	if (avatar3 == s.avatar)
+		return allCharacters.push(s)
+
+	console.log(allCharacters);
 };

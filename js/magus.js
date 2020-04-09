@@ -1,6 +1,7 @@
 class Magus extends Character {
   constructor (name, healthPoint, manaEnergy, attack = 40, defence = 30) {
     super(name, healthPoint, manaEnergy, attack, defence);
+      this.avatar = "img/jace.jpg";
   }
 
 
