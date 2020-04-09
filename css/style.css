@@ -1,0 +1,12 @@
+.block-image-holder .coupure img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
