@@ -2,6 +2,9 @@ class Magus extends Character {
   constructor (name, healthPoint, manaEnergy, attack = 40, defence = 30) {
     super(name, healthPoint, manaEnergy, attack, defence);
       this.avatar = "img/jace.jpg";
+      this.message = "";
+      this.message_def = "";
+      this.state = "Alive";
   }
 
 
@@ -14,17 +17,23 @@ class Magus extends Character {
 
 	takeDamage = (damage) => {
     	this.healthPoint = this.healthPoint + this.defence - damage;
-    	// console.log(`${this.name} détient ${this.healthPoint} points de vie, après s'être pris une attaque vicieuse de ${damage}.`);
+      let damage_get = damage - this.defence
+
+      this.message_def = `I just lost ${damage_get} HP and have only ${this.healthPoint} left.`;
+       if (this.healthPoint <= 0)
+         this.state = "Dead";
     }
 
 	dealDamage = (victim) => {
-		// console.log(`${this.name} inflige ${this.attack} points de dégâts à ${victim}`);
+    victim.takeDamage(this.attack);
+      this.message = `${this.name} inflige ${this.attack} points de dégâts à ${victim.name}.`;
 	}
 }
 
 let s = new Magus('Jace');
+characters.push(s);
 
-s.status();
-s.boostHealth();
-s.takeDamage(60);
-s.dealDamage("Garruk");
+// s.status();
+// s.boostHealth();
+// s.takeDamage(60);
+// s.dealDamage("Garruk");

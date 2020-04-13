@@ -85,8 +85,6 @@ chooseOpponent = () => {
 	start();
 };
 
-
-
 chooseOpponent2 = () => {
 
 	const avatar1 = profil.attributes["0"].value;

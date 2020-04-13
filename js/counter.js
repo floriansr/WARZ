@@ -1,10 +1,11 @@
-let counter = 10;
+let counter = 5;
 let intervalId = null;
 
 	finish = () => {
 	  clearInterval(intervalId);
 	  document.getElementById("bip").innerHTML = "Game on!";
 	  third_page.setAttribute('hidden', '');
+	  game();
 	};
 
 	bip = () => {

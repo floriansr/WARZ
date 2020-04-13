@@ -1,3 +1,6 @@
+const characters = [];
+
+
 class Character {
 	constructor (name, healthPoint = 100, manaEnergy = 100, attack = 50, defence = 30) {
 		this.healthPoint = healthPoint;
